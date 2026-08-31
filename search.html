@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search — Stackly Artisan</title>
+<meta name="description" content="Search handmade products, artisans and categories on Stackly Artisan.">
+<link rel="icon" type="image/webp" href="images/cat-pottery.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/pages.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<div class="page-load-bar"><i></i></div>
+<div class="topbar"><div class="container"><div class="tb-left"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5h4.2l-2.4 3h2.7l-4 5v-3.8h-1"/></svg>Free shipping across India on orders above ₹3,000</div><div class="tb-right"><a href="artisans.html">Meet the Artisans</a><a href="contact.html">Help &amp; Support</a></div></div></div>
+<header class="site-header"><div class="container header-inner">
+  <a href="index.html" class="brand" aria-label="Stackly Artisan"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3.5c3 3.2 5 6 5 9.2a5 5 0 01-10 0c0-3.2 2-6 5-9.2z"/><path d="M12 9.5v5.2"/></svg></span><span><span class="brand-name">Stackly <em>Artisan</em></span><span class="brand-sub">Handcrafted Marketplace</span></span></a>
+  <nav class="main-nav" aria-label="Primary"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="categories.html">Categories</a><a href="artisans.html">Artisans</a><a href="collections.html">Collections</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+  <div class="header-actions"><a href="wishlist.html" class="icon-btn" aria-label="Wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.6l-1-1a5.5 5.5 0 00-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 000-7.8z"/></svg><span class="icon-badge" data-wish-count style="display:none">0</span></a><a href="cart.html" class="icon-btn" aria-label="Cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.6"/><circle cx="18" cy="20" r="1.6"/><path d="M2.5 3.5h2.6l2.4 11.6a1.8 1.8 0 001.8 1.4h8.4a1.8 1.8 0 001.8-1.4L21 8.5H6"/></svg><span class="icon-badge" data-cart-count style="display:none">0</span></a><a href="login.html" class="btn btn-primary btn-sm">Login</a></div>
+</div></header>
+
+<main>
+<section class="sec" style="padding-top:44px"><div class="container">
+  <h1 class="sr-only">Search Results</h1>
+  <form class="search-bar-lg" action="search.html" method="get" style="margin-bottom:26px">
+    <input type="search" id="search-input" name="q" placeholder="Search products, artisans, categories..." aria-label="Search" autofocus>
+    <button type="submit" aria-label="Submit search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button>
+  </form>
+  <p class="result-summary" id="result-summary"></p>
+  <div class="empty-state" id="search-empty" style="display:none">
+    <div class="es-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></div>
+    <h3>No results found</h3>
+    <p>Try different keywords or browse the full collection.</p>
+    <a href="shop.html" class="btn btn-primary btn-lg" style="margin-top:20px">Browse All Products</a>
+  </div>
+  <div id="search-tabs" style="display:none;margin-bottom:22px">
+    <button class="chip-tab active" data-tab="products">Products</button>
+    <button class="chip-tab" data-tab="artisans">Artisans</button>
+    <button class="chip-tab" data-tab="categories">Categories</button>
+  </div>
+  <div class="product-grid" id="search-grid"></div>
+  <div class="artisan-list" id="search-artisans" style="display:none"></div>
+  <div class="cat-chips" id="search-cats" style="display:none"></div>
+</div></section>
+</main>
+
+<footer class="site-footer"><div class="container"><div class="footer-bottom"><span>© 2026 Stackly Artisan. All Rights Reserved.</span><span class="fb-pay">Crafted with ♥ for handmade</span></div></div></footer>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script>
+(function(){
+  const d = STACKLY.data, core = STACKLY.core;
+  const q = new URLSearchParams(location.search).get('q')||'';
+  let activeTab='products';
+  $('#search-input').value = q;
+
+  function norm(s){ return (s||'').toLowerCase(); }
+  const term = norm(q);
+
+  function products(){ return d.PRODUCTS.filter(p=> norm(p.title).includes(term)|| norm(p.short).includes(term)|| norm(p.materials).includes(term)|| norm(d.getCategory(p.category).name).includes(term)|| norm(d.getArtisan(p.artisan).name).includes(term)); }
+  function artisans(){ return d.ARTISANS.filter(a=> norm(a.name).includes(term)|| norm(a.craft).includes(term)|| norm(a.bio).includes(term)); }
+  function cats(){ return d.CATEGORIES.filter(c=> norm(c.name).includes(term)|| norm(c.desc).includes(term)); }
+
+  function renderProducts(list){
+    const g = $('#search-grid');
+    g.style.display = list.length ? 'grid' : 'none';
+    g.innerHTML = list.map(p=> core.productCardHTML(p)).join('');
+    $$('#search-grid .add-btn').forEach(btn=> btn.addEventListener('click', ()=>{ core.addToCart(btn.dataset.id); const l=btn.innerHTML; btn.classList.add('added'); btn.innerHTML='✓ Added'; setTimeout(()=>{btn.classList.remove('added');btn.innerHTML=l;},1400); }));
+    $$('#search-grid .wish-btn').forEach(btn=> btn.addEventListener('click', (e)=>{e.preventDefault();e.stopPropagation();core.toggleWish(btn.dataset.id);btn.classList.toggle('active', core.inWish(btn.dataset.id));}));
+    $$('#search-grid [data-quickview]').forEach(btn=> btn.addEventListener('click', ()=> core.openQuickView(btn.dataset.quickview)));
+  }
+  function renderArtisans(list){
+    const c = $('#search-artisans');
+    c.style.display = list.length ? 'block' : 'none';
+    c.innerHTML = list.map(a=>`
+      <a class="artisan-row" href="artisan-profile.html?id=${a.id}">
+        <img src="${a.img}" alt="${a.name}">
+        <div><b style="font-family:var(--font-head);font-size:18px">${a.name}</b><span style="color:var(--terracotta);font-size:13px">${a.craft}</span><p>${a.bio}</p><span class="artisan-loc">${a.location}</span></div>
+      </a>`).join('');
+  }
+  function renderCats(list){
+    const c = $('#search-cats');
+    c.style.display = list.length ? 'flex' : 'none';
+    c.innerHTML = list.map(cat=>`
+      <a class="cat-chip" href="shop.html?category=${cat.id}"><img src="${cat.img}" alt=""><span>${cat.name}</span></a>`).join('');
+  }
+
+  function show(tab){
+    activeTab=tab;
+    $$('#search-tabs .chip-tab').forEach(b=> b.classList.toggle('active', b.dataset.tab===tab));
+    renderProducts(tab==='products'? products() : []);
+    renderArtisans(tab==='artisans'? artisans() : []);
+    renderCats(tab==='categories'? cats() : []);
+    const any = products().length || artisans().length || cats().length;
+    $('#search-empty').style.display = any ? 'none' : 'block';
+  }
+
+  $$('#search-tabs .chip-tab').forEach(b=> b.addEventListener('click', ()=> show(b.dataset.tab)));
+
+  if(!term){
+    $('#result-summary').textContent = 'Type something above to search the entire marketplace.';
+    show('products');
+  } else {
+    const p=products().length, a=artisans().length, c=cats().length;
+    $('#result-summary').textContent = `${p} product${p!==1?'s':''}, ${a} artisan${a!==1?'s':''}, ${c} categor${c!==1?'y':'ies'} found for “${q}”`;
+    $('#search-tabs').style.display='flex';
+    show('products');
+  }
+})();
+</script>
+</body>
+</html>

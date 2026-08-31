@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us — Stackly Artisan</title>
+<meta name="description" content="Our story — a premium marketplace preserving traditional handmade crafts and empowering independent artisans.">
+<link rel="icon" type="image/webp" href="images/cat-pottery.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/pages.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<div class="page-load-bar"><i></i></div>
+<div class="topbar"><div class="container"><div class="tb-left"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5h4.2l-2.4 3h2.7l-4 5v-3.8h-1"/></svg>Free shipping across India on orders above ₹3,000</div><div class="tb-right"><a href="artisans.html">Meet the Artisans</a><a href="contact.html">Help &amp; Support</a></div></div></div>
+<header class="site-header"><div class="container header-inner">
+  <a href="index.html" class="brand" aria-label="Stackly Artisan"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3.5c3 3.2 5 6 5 9.2a5 5 0 01-10 0c0-3.2 2-6 5-9.2z"/><path d="M12 9.5v5.2"/></svg></span><span><span class="brand-name">Stackly <em>Artisan</em></span><span class="brand-sub">Handcrafted Marketplace</span></span></a>
+  <nav class="main-nav" aria-label="Primary"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="categories.html">Categories</a><a href="artisans.html">Artisans</a><a href="collections.html">Collections</a><a href="about.html" class="active">About</a><a href="contact.html">Contact</a></nav>
+  <div class="header-actions"><button class="icon-btn search-trigger" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button><a href="wishlist.html" class="icon-btn" aria-label="Wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.6l-1-1a5.5 5.5 0 00-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 000-7.8z"/></svg><span class="icon-badge" data-wish-count style="display:none">0</span></a><a href="cart.html" class="icon-btn" aria-label="Cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.6"/><circle cx="18" cy="20" r="1.6"/><path d="M2.5 3.5h2.6l2.4 11.6a1.8 1.8 0 001.8 1.4h8.4a1.8 1.8 0 001.8-1.4L21 8.5H6"/></svg><span class="icon-badge" data-cart-count style="display:none">0</span></a><a href="login.html" class="btn btn-primary btn-sm">Login</a><button class="nav-toggle" id="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button></div>
+</div></header>
+<div class="mobile-nav" id="mobile-nav"><button class="icon-btn mn-close" id="mn-close" aria-label="Close" style="color:#fff;border-color:rgba(255,255,255,.2)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg></button><div class="brand" style="margin-bottom:24px"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3.5c3 3.2 5 6 5 9.2a5 5 0 01-10 0c0-3.2 2-6 5-9.2z"/></svg></span><span><span class="brand-name" style="color:#fff">Stackly <em>Artisan</em></span></span></div><a href="index.html" class="mn-link">Home</a><a href="shop.html" class="mn-link">Shop</a><a href="categories.html" class="mn-link">Categories</a><a href="artisans.html" class="mn-link">Artisans</a><a href="collections.html" class="mn-link">Collections</a><a href="about.html" class="mn-link">About</a><a href="contact.html" class="mn-link">Contact</a><div class="m-icon-row"><a href="wishlist.html">Wishlist</a><a href="cart.html">Cart</a></div><div class="mn-actions"><a href="login.html" class="btn btn-primary">Login</a><a href="create-account.html" class="btn btn-ghost" style="border-color:rgba(255,255,255,.3);color:#fff">Create Account</a></div></div>
+<div class="modal-backdrop search-overlay" id="search-overlay"><div class="modal" style="max-width:640px;background:transparent;box-shadow:none"><button class="modal-close" id="search-close" aria-label="Close search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg></button><form class="search-bar-lg" action="search.html" method="get" style="background:#fff;margin:0;box-shadow:var(--shadow-lg)"><input type="search" name="q" placeholder="Search products, artisans, categories..." aria-label="Search"><button type="submit" aria-label="Submit search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button></form></div></div>
+
+<main>
+<section class="page-hero"><div class="container"><div class="breadcrumb"><a href="index.html">Home</a> <span>›</span> <span>About</span></div><h1>Made Slowly. Loved Forever.</h1><p>The story behind a marketplace built around the hands that create.</p></div></section>
+<section class="sec" style="padding-top:20px"><div class="container">
+  <div class="about-hero-img reveal"><img src="images/about-story.webp" alt="Artisans at work in our community"></div>
+</div></section>
+<section class="sec" id="story" style="padding-top:70px;background:var(--bg)">
+  <div class="container"><div class="about-story">
+    <div class="reveal"><img src="images/made-slowly.webp" alt="Hands shaping clay"></div>
+    <div>
+      <span class="eyebrow">Our Story</span>
+      <h2 style="margin:16px 0 18px">From the workshop floor to your home</h2>
+      <p style="color:var(--brown-3);line-height:1.75;margin-bottom:16px">Stackly Artisan began with a simple belief: that the objects around us should carry the warmth of the people who made them. In an age of machines and mass production, we set out to build a premium marketplace where independent artisans are seen, celebrated, and fairly rewarded.</p>
+      <p style="color:var(--brown-3);line-height:1.75;margin-bottom:24px">Today, we work with potters, weavers, woodcarvers and craftspeople across India — curating pieces that honour centuries-old techniques while feeling at home in modern lives. Every product is verified handmade, fairly priced, and shipped with the care it deserves.</p>
+      <div style="display:flex;gap:34px;flex-wrap:wrap">
+        <div><span style="font-family:var(--font-head);font-size:34px;color:var(--terracotta)">350+</span><span style="display:block;font-size:13.5px;color:var(--text-3)">Artisan Partners</span></div>
+        <div><span style="font-family:var(--font-head);font-size:34px;color:var(--terracotta)">28</span><span style="display:block;font-size:13.5px;color:var(--text-3)">Craft Categories</span></div>
+        <div><span style="font-family:var(--font-head);font-size:34px;color:var(--terracotta)">40k+</span><span style="display:block;font-size:13.5px;color:var(--text-3)">Happy Customers</span></div>
+      </div>
+    </div>
+  </div>
+</div></section>
+<section class="sec" id="sustain" style="background:var(--bg-alt)">
+  <div class="container">
+    <div style="text-align:center;max-width:640px;margin:0 auto 44px" class="reveal">
+      <span class="eyebrow" style="justify-content:center">What We Stand For</span>
+      <h2 style="margin:14px 0 12px">Craft, people and planet in balance</h2>
+      <p style="color:var(--brown-3)">Three pillars guide every decision we make as a marketplace.</p>
+    </div>
+    <div class="pillars-grid">
+      <div class="pillar-card reveal"><span class="pill-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.6l-1-1a5.5 5.5 0 00-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 000-7.8z"/></svg></span><h3>Empowering Makers</h3><p>Fair pricing, clear payments and a global audience that lets artisans thrive doing what they love.</p></div>
+      <div class="pillar-card alt2 reveal"><span class="pill-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2.8l7.5 3v5.4c0 5-3.4 8.3-7.5 10-4.1-1.7-7.5-5-7.5-10V5.8z"/></svg></span><h3>Sustainable Choices</h3><p>Natural dyes, reclaimed timber and low-waste making. Every piece is designed to be kept, not replaced.</p></div>
+      <div class="pillar-card alt reveal"><span class="pill-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5c3 3.2 5 6 5 9.2a5 5 0 01-10 0c0-3.2 2-6 5-9.2z"/><path d="M12 9.5v5.2"/></svg></span><h3>Timeless Craft</h3><p>We champion heritage techniques that deserve to survive, pairing them with design that feels effortlessly modern.</p></div>
+    </div>
+  </div>
+</section>
+<section class="sec"><div class="container"><div class="about-story reveal">
+  <div>
+    <span class="eyebrow">Sustainability</span>
+    <h2 style="margin:16px 0 18px">Kind to the planet, by design</h2>
+    <p style="color:var(--brown-3);line-height:1.75;margin-bottom:16px">Handmade is inherently sustainable — but we go further. Our artisans use natural pigments, ethically sourced materials and reclaimed timber wherever possible. We ship plastic-free with minimal, compostable packaging and offset the carbon of every delivery.</p>
+    <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;margin-top:6px">
+      <li style="display:flex;gap:10px;align-items:flex-start"><span style="color:var(--green-2);margin-top:2px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18"><path d="M4.5 12.5l5 5 10-11"/></svg></span><span style="color:var(--brown-3);font-size:15px">100% natural and reclaimed materials where possible</span></li>
+      <li style="display:flex;gap:10px;align-items:flex-start"><span style="color:var(--green-2);margin-top:2px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18"><path d="M4.5 12.5l5 5 10-11"/></svg></span><span style="color:var(--brown-3);font-size:15px">Plastic-free, compostable packaging on every order</span></li>
+      <li style="display:flex;gap:10px;align-items:flex-start"><span style="color:var(--green-2);margin-top:2px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18"><path d="M4.5 12.5l5 5 10-11"/></svg></span><span style="color:var(--brown-3);font-size:15px">Carbon-offset shipping across all deliveries</span></li>
+    </ul>
+    <a href="collections.html" class="btn btn-primary" style="margin-top:26px">Explore Sustainable Pieces</a>
+  </div>
+  <div><img src="images/about-sustain.webp" alt="Sustainable natural materials"></div>
+</div></div></section>
+
+<section class="sec"><div class="container"><div class="cta-band reveal"><h2>Ready to bring handmade home?</h2><p>Browse collections crafted by skilled hands and shop with purpose.</p><a href="shop.html" class="btn btn-dark btn-lg">Shop Now</a><span class="cta-or">or</span><a href="create-account.html" class="btn btn-gold btn-lg">Join as an Artisan</a></div></div></section>
+</main>
+
+<footer class="site-footer"><div class="container"><div class="footer-grid">
+  <div class="f-brand"><a href="index.html" class="brand" style="flex-direction:column;align-items:flex-start;gap:12px"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3.5c3 3.2 5 6 5 9.2a5 5 0 01-10 0c0-3.2 2-6 5-9.2z"/></svg></span><span><span class="brand-name">Stackly <em>Artisan</em></span></span></a><p>A premium marketplace connecting the world with independent artisans — preserving traditional craft, one beautiful piece at a time.</p><div class="social"><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8.5V6.8c0-.8.2-1.3 1.4-1.3H17V2.5h-2.6C11.2 2.5 10 4 10 6.6v1.9H8v3h2V21.5h4V11.5h2.7l.3-3z"/></svg></a><a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.2 2.6 7.8 6.3 9.3-.1-.8-.2-2 0-2.9l1.2-5s-.3-.6-.3-1.5c0-1.4.8-2.4 1.8-2.4.9 0 1.3.6 1.3 1.4 0 .9-.6 2.2-.9 3.4-.2 1 .5 1.8 1.5 1.8 1.8 0 3.2-1.9 3.2-4.7 0-2.4-1.7-4.1-4.2-4.1-2.9 0-4.6 2.2-4.6 4.4 0 .9.3 1.8.8 2.3.1.1.1.2.1.3l-.3 1.2c0 .2-.2.2-.4.1-1.2-.6-2-2.4-2-3.9 0-3.2 2.3-6.1 6.7-6.1 3.5 0 6.3 2.5 6.3 5.9 0 3.5-2.2 6.3-5.3 6.3-1 0-2-.5-2.3-1.2l-.6 2.4c-.2.9-.8 1.9-1.2 2.6.9.3 1.9.4 2.9.4 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg></a><a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8z"/><path d="m9.6 15.5 6-3.5-6-3.5v7z" fill="var(--espresso)"/></svg></a></div></div>
+  <div class="f-col"><h6>Explore</h6><ul><li><a href="shop.html">Shop</a></li><li><a href="categories.html">Categories</a></li><li><a href="collections.html">Collections</a></li><li><a href="artisans.html">Artisans</a></li></ul></div><div class="f-col"><h6>Company</h6><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="about.html#story">Our Story</a></li><li><a href="about.html#sustain">Sustainability</a></li></ul></div><div class="f-col"><h6>Customer</h6><ul><li><a href="orders.html">Orders</a></li><li><a href="wishlist.html">Wishlist</a></li><li><a href="contact.html">Shipping</a></li><li><a href="contact.html">Returns</a></li></ul></div><div class="f-col"><h6>Get in Touch</h6><ul><li><a href="mailto:hello@stacklyartisan.com">hello@stacklyartisan.com</a></li><li><a href="tel:+919876543210">+91 98765 43210</a></li><li><span style="font-size:14px;color:#CDC3AE">Mon–Sat, 10am–7pm IST</span></li></ul></div>
+</div><div class="footer-bottom"><span>© 2026 Stackly Artisan. All Rights Reserved.</span><span class="fb-pay">Crafted with ♥ for handmade</span></div></div></footer>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

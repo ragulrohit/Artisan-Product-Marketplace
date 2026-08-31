@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop Handmade Products — Stackly Artisan</title>
+<meta name="description" content="Browse and search the full collection of handmade, handcrafted and traditional products at Stackly Artisan. Filter by category, price, rating and artisan.">
+<link rel="icon" type="image/webp" href="images/cat-pottery.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/pages.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<div class="page-load-bar"><i></i></div>
+
+<div class="topbar">
+  <div class="container">
+    <div class="tb-left"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5h4.2l-2.4 3h2.7l-4 5v-3.8h-1"/></svg>Free shipping across India on orders above ₹3,000</div>
+    <div class="tb-right"><a href="artisans.html">Meet the Artisans</a><a href="contact.html">Help &amp; Support</a></div>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand" aria-label="Stackly Artisan">
+      <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3.5c3 3.2 5 6 5 9.2a5 5 0 01-10 0c0-3.2 2-6 5-9.2z"/><path d="M12 9.5v5.2"/></svg></span>
+      <span><span class="brand-name">Stackly <em>Artisan</em></span><span class="brand-sub">Handcrafted Marketplace</span></span>
+    </a>
+    <nav class="main-nav" aria-label="Primary">
+      <a href="index.html">Home</a><a href="shop.html" class="active">Shop</a><a href="categories.html">Categories</a><a href="artisans.html">Artisans</a><a href="collections.html">Collections</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn search-trigger" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button>
+      <a href="wishlist.html" class="icon-btn" aria-label="Wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.6l-1-1a5.5 5.5 0 00-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 000-7.8z"/></svg><span class="icon-badge" data-wish-count style="display:none">0</span></a>
+      <a href="cart.html" class="icon-btn" aria-label="Cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.6"/><circle cx="18" cy="20" r="1.6"/><path d="M2.5 3.5h2.6l2.4 11.6a1.8 1.8 0 001.8 1.4h8.4a1.8 1.8 0 001.8-1.4L21 8.5H6"/></svg><span class="icon-badge" data-cart-count style="display:none">0</span></a>
+      <a href="login.html" class="btn btn-primary btn-sm">Login</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobile-nav">
+  <button class="icon-btn mn-close" id="mn-close" aria-label="Close" style="color:#fff;border-color:rgba(255,255,255,.2)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+  <div class="brand" style="margin-bottom:24px"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3.5c3 3.2 5 6 5 9.2a5 5 0 01-10 0c0-3.2 2-6 5-9.2z"/></svg></span><span><span class="brand-name" style="color:#fff">Stackly <em>Artisan</em></span></span></div>
+  <a href="index.html" class="mn-link">Home</a><a href="shop.html" class="mn-link">Shop</a><a href="categories.html" class="mn-link">Categories</a><a href="artisans.html" class="mn-link">Artisans</a><a href="collections.html" class="mn-link">Collections</a><a href="about.html" class="mn-link">About</a><a href="contact.html" class="mn-link">Contact</a>
+  <div class="m-icon-row"><a href="wishlist.html">Wishlist</a><a href="cart.html">Cart</a></div>
+  <div class="mn-actions"><a href="login.html" class="btn btn-primary">Login</a><a href="create-account.html" class="btn btn-ghost" style="border-color:rgba(255,255,255,.3);color:#fff">Create Account</a></div>
+</div>
+
+<div class="modal-backdrop search-overlay" id="search-overlay">
+  <div class="modal" style="max-width:640px;background:transparent;box-shadow:none">
+    <button class="modal-close" id="search-close" aria-label="Close search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+    <form class="search-bar-lg" action="search.html" method="get" style="background:#fff;margin:0;box-shadow:var(--shadow-lg)">
+      <input type="search" name="q" placeholder="Search products, artisans, categories..." aria-label="Search"><button type="submit" aria-label="Submit search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button>
+    </form>
+  </div>
+</div>
+
+<!-- ====== PRODUCT DETAIL MODAL (Quick View) ====== -->
+<div class="modal-backdrop" id="qv-backdrop">
+  <div class="modal" id="quickview">
+    <button class="modal-close" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+    <div class="qv-grid">
+      <div class="qv-media"><img src="images/pottery-vase.webp" alt="Product"></div>
+      <div class="qv-body">
+        <span class="product-cat qv-cat">Pottery</span>
+        <h3 class="product-title" style="font-size:24px"></h3>
+        <div class="qv-rating" style="display:flex;align-items:center;gap:6px;margin:8px 0"><span class="stars">★★★★★</span><span class="rating-count qv-count"></span></div>
+        <div class="qv-price-row" style="display:flex;align-items:center;gap:10px;margin:12px 0">
+          <span class="price"><span class="now qv-price" style="font-size:26px;font-family:var(--font-head);font-weight:700;color:var(--terracotta-2)"></span><span class="was qv-was"></span></span>
+        </div>
+        <div class="qv-meta" style="font-size:14px;color:var(--brown-3)">by <span class="qv-artisan" style="color:var(--terracotta)"></span></div>
+        <p class="product-desc" style="font-size:14.5px;color:var(--brown-3);margin:14px 0"></p>
+        <div class="qv-qty" style="display:flex;gap:14px;align-items:center;margin:16px 0">
+          <div class="qty-selector">
+            <button type="button" data-inc-qv>−</button><input type="number" value="1" min="1" readonly><button type="button" data-dec-qv>+</button>
+          </div>
+        </div>
+        <div class="qv-foot">
+          <button class="btn btn-primary qv-add" data-qty="1">Add to Cart</button>
+          <button class="btn btn-ghost qv-wish">Wishlist</button>
+        </div>
+        <a href="product.html" class="qv-view btn-link" style="display:inline-flex;align-items:center;gap:6px;margin-top:14px;color:var(--terracotta);font-weight:600">View full details →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main>
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> <span>›</span> <span>Shop</span></div>
+    <h1>Shop Handmade</h1>
+    <p>Filter, sort and discover one-of-a-kind pieces from independent artisans across India.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:40px">
+  <div class="container shop-layout">
+    <!-- SIDEBAR -->
+    <aside class="shop-sidebar">
+      <div class="filter-card">
+        <h5>Categories <button class="f-clear" data-clear-cat>Clear</button></h5>
+        <ul class="f-cat-list" id="filter-cats"></ul>
+      </div>
+      <div class="filter-card">
+        <h5>Price</h5>
+        <div class="range-labels"><span>Min</span><span>Max</span></div>
+        <input type="range" id="price-range" min="500" max="6000" step="100" value="6000">
+        <div class="range-output" id="price-output">Up to ₹6,000</div>
+      </div>
+      <div class="filter-card">
+        <h5>Rating</h5>
+        <label class="rating-option"><input type="radio" name="rating" value="0" checked> Any rating</label>
+        <label class="rating-option"><input type="radio" name="rating" value="4.7"> 4.7★ &amp; above</label>
+        <label class="rating-option"><input type="radio" name="rating" value="4.8"> 4.8★ &amp; above</label>
+        <label class="rating-option"><input type="radio" name="rating" value="4.9"> 4.9★ &amp; above</label>
+      </div>
+      <div class="filter-card">
+        <h5>Artisan <button class="f-clear" data-clear-art>Clear</button></h5>
+        <ul class="f-cat-list" id="filter-artisans"></ul>
+      </div>
+      <div class="filter-card">
+        <h5>Discount</h5>
+        <label class="rating-option"><input type="checkbox" id="only-discount"> Only discounted items</label>
+      </div>
+      <button class="btn btn-dark btn-block" id="reset-filters" style="border-radius:14px">Reset All Filters</button>
+    </aside>
+
+    <!-- RESULTS -->
+    <div>
+      <div class="shop-toolbar">
+        <div class="shop-result-count" id="result-count">Showing <b>0</b> products</div>
+        <div class="sort-select">
+          <label for="sort">Sort by</label>
+          <select id="sort">
+            <option value="featured">Featured</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="rating">Highest Rating</option>
+            <option value="name">Name (A–Z)</option>
+          </select>
+        </div>
+      </div>
+      <div class="active-filters" id="active-filters"></div>
+      <div class="product-grid" id="shop-grid"></div>
+      <div class="empty-state" id="shop-empty" style="display:none">
+        <div class="es-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></div>
+        <h3>No products match your filters</h3>
+        <p>Try adjusting or clearing your filters to see more handmade pieces.</p>
+        <button class="btn btn-primary" onclick="location.reload()" style="margin-top:16px">Reset Filters</button>
+      </div>
+      <div class="load-more-wrap" id="load-more-wrap">
+        <button class="btn btn-outline btn-lg" id="load-more">Load More Products</button>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="f-brand">
+        <a href="index.html" class="brand" style="flex-direction:column;align-items:flex-start;gap:12px"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3.5c3 3.2 5 6 5 9.2a5 5 0 01-10 0c0-3.2 2-6 5-9.2z"/></svg></span><span><span class="brand-name">Stackly <em>Artisan</em></span></span></a>
+        <p>A premium marketplace connecting the world with independent artisans — preserving traditional craft, one beautiful piece at a time.</p>
+        <div class="social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8.5V6.8c0-.8.2-1.3 1.4-1.3H17V2.5h-2.6C11.2 2.5 10 4 10 6.6v1.9H8v3h2V21.5h4V11.5h2.7l.3-3z"/></svg></a>
+          <a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.2 2.6 7.8 6.3 9.3-.1-.8-.2-2 0-2.9l1.2-5s-.3-.6-.3-1.5c0-1.4.8-2.4 1.8-2.4.9 0 1.3.6 1.3 1.4 0 .9-.6 2.2-.9 3.4-.2 1 .5 1.8 1.5 1.8 1.8 0 3.2-1.9 3.2-4.7 0-2.4-1.7-4.1-4.2-4.1-2.9 0-4.6 2.2-4.6 4.4 0 .9.3 1.8.8 2.3.1.1.1.2.1.3l-.3 1.2c0 .2-.2.2-.4.1-1.2-.6-2-2.4-2-3.9 0-3.2 2.3-6.1 6.7-6.1 3.5 0 6.3 2.5 6.3 5.9 0 3.5-2.2 6.3-5.3 6.3-1 0-2-.5-2.3-1.2l-.6 2.4c-.2.9-.8 1.9-1.2 2.6.9.3 1.9.4 2.9.4 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8z"/><path d="m9.6 15.5 6-3.5-6-3.5v7z" fill="var(--espresso)"/></svg></a>
+        </div>
+      </div>
+      <div class="f-col"><h6>Explore</h6><ul><li><a href="shop.html">Shop</a></li><li><a href="categories.html">Categories</a></li><li><a href="collections.html">Collections</a></li><li><a href="artisans.html">Artisans</a></li></ul></div>
+      <div class="f-col"><h6>Company</h6><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="about.html#story">Our Story</a></li><li><a href="about.html#sustain">Sustainability</a></li></ul></div>
+      <div class="f-col"><h6>Customer</h6><ul><li><a href="orders.html">Orders</a></li><li><a href="wishlist.html">Wishlist</a></li><li><a href="contact.html">Shipping</a></li><li><a href="contact.html">Returns</a></li></ul></div>
+      <div class="f-col"><h6>Get in Touch</h6><ul><li><a href="mailto:hello@stacklyartisan.com">hello@stacklyartisan.com</a></li><li><a href="tel:+919876543210">+91 98765 43210</a></li><li><span style="font-size:14px;color:#CDC3AE">Mon–Sat, 10am–7pm IST</span></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Stackly Artisan. All Rights Reserved.</span><span class="fb-pay">Crafted with ♥ for handmade</span></div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script>
+(function(){
+  const d = STACKLY.data, core = STACKLY.core;
+  const params = new URLSearchParams(location.search);
+  const state = {
+    cat: params.get('cat') || 'all',
+    artisan: 'all',
+    maxPrice: 6000,
+    rating: 0,
+    discount: false,
+    sort: 'featured',
+    q: (params.get('q')||'').toLowerCase(),
+    perPage: 8,
+    shown: 8
+  };
+
+  /* Build filter lists */
+  $('#filter-cats').innerHTML = `<li><button data-cat="all" class="active">All Categories <span>${d.PRODUCTS.length}</span></button></li>` +
+    d.CATEGORIES.map(c=>`<li><button data-cat="${c.id}">${c.name} <span>${d.categoryProducts(c.id).length}</span></button></li>`).join('');
+  $('#filter-artisans').innerHTML = d.ARTISANS.map(a=>`<li><button data-art="${a.id}">${a.name} <span>${d.artisanProducts(a.id).length}</span></button></li>`).join('');
+
+  /* price */
+  const pr = $('#price-range');
+  pr.addEventListener('input', ()=>{ state.maxPrice = +pr.value; $('#price-output').textContent = 'Up to ₹'+(+pr.value).toLocaleString('en-IN'); renderActive(); render(); });
+
+  /* rating + discount */
+  $$('input[name=rating]').forEach(r=> r.addEventListener('change', function(){ state.rating = +this.value; renderActive(); render(); }));
+  $('#only-discount').addEventListener('change', function(){ state.discount = this.checked; renderActive(); render(); });
+
+  /* category + artisan buttons */
+  $('#filter-cats').addEventListener('click', e=>{ const b=e.target.closest('button[data-cat]'); if(!b) return; state.cat=b.dataset.cat; paintCat(); render(); });
+  $('#filter-artisans').addEventListener('click', e=>{ const b=e.target.closest('button[data-art]'); if(!b) return; state.artisan=b.dataset.art; paintArt(); render(); });
+  function paintCat(){ $$('#filter-cats button').forEach(b=> b.classList.toggle('active', b.dataset.cat===state.cat)); }
+  function paintArt(){ $$('#filter-artisans button').forEach(b=> b.classList.toggle('active', b.dataset.art===state.artisan)); }
+
+  /* clear + reset */
+  $$('[data-clear-cat]').forEach(b=> b.addEventListener('click', ()=>{ state.cat='all'; paintCat(); render(); }));
+  $$('[data-clear-art]').forEach(b=> b.addEventListener('click', ()=>{ state.artisan='all'; paintArt(); render(); }));
+  $('#reset-filters').addEventListener('click', ()=>{ location.search=''; });
+
+  /* sort */
+  $('#sort').addEventListener('change', ()=>{ state.sort=$('#sort').value; state.shown=state.perPage; render(); });
+
+  /* load more */
+  $('#load-more').addEventListener('click', ()=>{ state.shown += state.perPage; render(); });
+
+  function filtered(){
+    let list = d.PRODUCTS.filter(p=>{
+      if(state.cat!=='all' && p.category!==state.cat) return false;
+      if(state.artisan!=='all' && p.artisan!==state.artisan) return false;
+      if(p.price > state.maxPrice) return false;
+      if(state.rating && p.rating < state.rating) return false;
+      if(state.discount && !p.was) return false;
+      if(state.q){
+        const a = d.getArtisan(p.artisan); const c = d.getCategory(p.category);
+        const hay = (p.title+' '+a.name+' '+c.name+' '+p.category).toLowerCase();
+        if(!hay.includes(state.q)) return false;
+      }
+      return true;
+    });
+    switch(state.sort){
+      case 'price-asc': list.sort((a,b)=>a.price-b.price); break;
+      case 'price-desc': list.sort((a,b)=>b.price-a.price); break;
+      case 'rating': list.sort((a,b)=>b.rating-a.rating); break;
+      case 'name': list.sort((a,b)=>a.title.localeCompare(b.title)); break;
+      default: list.sort((a,b)=>b.reviews-a.reviews);
+    }
+    return list;
+  }
+
+  function renderActive(){
+    const arr=[];
+    if(state.q) arr.push({label:'“'+state.q+'”', clear:()=>{state.q=''; location.search=location.pathname;}});
+    if(state.cat!=='all') arr.push({label:d.getCategory(state.cat).name, clear:()=>{state.cat='all';paintCat();render();}});
+    if(state.artisan!=='all') arr.push({label:d.getArtisan(state.artisan).name, clear:()=>{state.artisan='all';paintArt();render();}});
+    if(state.maxPrice<6000) arr.push({label:'Under ₹'+state.maxPrice, clear:()=>{state.maxPrice=6000;pr.value=6000;$('#price-output').textContent='Up to ₹6,000';render();}});
+    if(state.rating) arr.push({label:state.rating+'★+', clear:()=>{state.rating=0;$$('input[name=rating]').forEach(r=>r.checked=(r.value==='0'));render();}});
+    $('#active-filters').innerHTML = arr.map(f=>`<span class="filter-chip">${f.label}<button data-chip="x">✕</button></span>`).join('');
+    $$('#active-filters .filter-chip button').forEach((b,i)=> b.addEventListener('click', ()=> arr[i].clear()));
+  }
+
+  function render(){
+    const list = filtered();
+    const shown = list.slice(0, state.shown);
+    $('#result-count').innerHTML = `Showing <b>${shown.length}</b> of ${list.length} products`;
+    $('#shop-grid').innerHTML = shown.map(p=> core.productCardHTML(p)).join('');
+    $('#shop-empty').style.display = list.length ? 'none' : 'block';
+    $('#load-more-wrap').style.display = (list.length > state.shown) ? 'block' : 'none';
+    core.renderWishButtons();
+    // rebind handlers (main.js bound on DOMContentLoaded to existing .add-btn/.wish-btn only)
+    $$('#shop-grid .add-btn').forEach(btn=> btn.addEventListener('click', ()=>{ core.addToCart(btn.dataset.id); const l=btn.innerHTML; btn.classList.add('added'); btn.innerHTML='✓ Added'; setTimeout(()=>{btn.classList.remove('added');btn.innerHTML=l;},1400); }));
+    $$('#shop-grid .wish-btn').forEach(btn=> btn.addEventListener('click', (e)=>{e.preventDefault();e.stopPropagation();core.toggleWish(btn.dataset.id);btn.classList.toggle('active', core.inWish(btn.dataset.id));}));
+    $$('#shop-grid [data-quickview]').forEach(btn=> btn.addEventListener('click', ()=> core.openQuickView(btn.dataset.quickview)));
+  }
+
+  paintCat(); paintArt(); renderActive(); render();
+})();
+</script>
+</body>
+</html>

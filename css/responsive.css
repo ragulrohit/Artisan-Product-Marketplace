@@ -1,0 +1,197 @@
+/* =========================================================
+   STACKLY ARTISAN — Responsive styles
+   ========================================================= */
+
+/* --- Laptop / small desktop (1200px) --- */
+@media (max-width:1240px){
+  .product-grid,.product-grid.cols-3{grid-template-columns:repeat(3,1fr)}
+  .cat-grid{grid-template-columns:repeat(3,1fr)}
+  .main-nav a{padding:9px 10px;font-size:14px}
+}
+
+/* --- Tablet landscape (1080px) --- */
+@media (max-width:1080px){
+  .dash-mobile-toggle{left:auto;right:24px;top:16px}
+  .profile-avatar{flex-wrap:wrap;align-items:center}
+  .profile-avatar .pa-name{flex:1 1 180px;min-width:0}
+  .profile-avatar .pa-name span{display:block;line-height:1.6}
+  .profile-avatar .btn{margin-left:auto!important}
+  .main-nav{display:none}
+  .nav-toggle{display:inline-flex}
+  .hero .container{grid-template-columns:1fr;gap:44px;text-align:center;padding-top:54px;padding-bottom:70px}
+  .hero .lead{margin-left:auto;margin-right:auto}
+  .hero-actions,.hero-trust{justify-content:center}
+  .hero-frame{max-width:440px;margin:0 auto}
+  .hc1{left:0}
+  .hc2{right:0}
+  .creme .container,.editorial .container{grid-template-columns:1fr}
+  .editorial-img-wrap{max-width:520px;margin:0 auto}
+  .emboss-quote{right:0}
+  .shop-layout{grid-template-columns:1fr}
+  .shop-sidebar{position:static}
+  .artisan-feature .container{grid-template-columns:1fr}
+  .cat-page-grid{grid-template-columns:repeat(2,1fr)}
+  .artisan-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr 1fr;gap:34px}
+  .footer-grid .f-brand{grid-column:1/-1}
+  .contact-layout{grid-template-columns:1fr}
+  .auth-page{grid-template-columns:1fr}
+  .auth-visual{display:none}
+  .dash-layout{grid-template-columns:1fr}
+  .dash-sidebar{position:fixed;inset:0 auto 0 0;width:280px;transform:translateX(-100%);transition:transform .4s var(--ease);z-index:180}
+  .dash-sidebar.open{transform:none}
+  .dash-close{display:inline-flex}
+  .dash-mobile-toggle{display:inline-flex}
+  .dash-overlay{position:fixed;inset:0;background:rgba(36,24,18,.5);z-index:170;opacity:0;visibility:hidden;transition:opacity .3s}
+  .dash-overlay.show{opacity:1;visibility:visible}
+}
+
+/* --- Tablet portrait (860px) --- */
+@media (max-width:860px){
+  .sec{padding:66px 0}
+  .product-grid,.product-grid.cols-3{grid-template-columns:repeat(2,1fr)}
+  /* Keep the price and cart action from colliding on compact cards. */
+  .product-foot{align-items:stretch;flex-direction:column;gap:10px}
+  .product-foot .price{min-width:0;justify-content:flex-start;gap:7px}
+  .product-foot .add-btn{width:100%;justify-content:center}
+  .cat-grid{grid-template-columns:repeat(2,1fr)}
+  .value-grid,.stats-grid{grid-template-columns:repeat(2,1fr);gap:18px}
+  .review-grid{grid-template-columns:1fr 1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .footer-grid .f-brand{grid-column:1/-1}
+  .pd-layout{grid-template-columns:1fr;gap:36px}
+  .pd-gallery{position:static}
+  .checkout-layout,.cart-layout{grid-template-columns:1fr}
+  .order-summary,.cart-summary{position:static}
+  .ap-body{grid-template-columns:1fr}
+  .about-story{grid-template-columns:1fr}
+  .pillars-grid{grid-template-columns:1fr 1fr}
+  .dash-grid{grid-template-columns:1fr}
+  .stat-cards{grid-template-columns:repeat(2,1fr)}
+  .spec-grid{grid-template-columns:1fr}
+  .qv-grid{grid-template-columns:1fr}
+  .qv-grid .qv-media{max-height:340px}
+  .qv-grid .qv-media img{aspect-ratio:16/10}
+  .contact-cards{grid-template-columns:1fr 1fr}
+  .makers-grid{grid-template-columns:1fr 1fr}
+}
+
+/* --- Mobile (640px) --- */
+@media (max-width:640px){
+  .dash-mobile-toggle{left:auto;right:16px;top:14px}
+  .profile-avatar{flex-wrap:wrap;align-items:center}
+  .profile-avatar .pa-name{flex:1 1 150px;min-width:0}
+  .profile-avatar .pa-name span{display:block;line-height:1.6}
+  .profile-avatar .btn{margin-left:auto!important}
+  .topbar .tb-right{display:none}
+  .header-actions .icon-btn.search-trigger{display:none}
+  .hero .container{padding-top:40px;padding-bottom:54px}
+  .hero h1{font-size:clamp(30px,9vw,40px)}
+  .hero .lead{font-size:16.5px}
+  .hero-actions .btn{width:100%;justify-content:center}
+  .product-grid,.product-grid.cols-3{grid-template-columns:1fr}
+  .product-grid .product-card{max-width:400px;margin:0 auto;width:100%}
+  .cat-grid{grid-template-columns:1fr}
+  .cat-grid .cat-card{max-width:400px;margin:0 auto;width:100%}
+  .review-grid{grid-template-columns:1fr}
+  .value-grid,.stats-grid{grid-template-columns:1fr 1fr;gap:14px}
+  .value-card{padding:22px 16px}
+  .editorial-list{grid-template-columns:1fr}
+  .newsletter-form{flex-direction:column;border-radius:20px}
+  .newsletter-form .btn{width:100%}
+  .newsletter-form input{text-align:center;padding:13px}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:26px}
+  .footer-grid .f-brand{grid-column:1/-1}
+  .footer-bottom{flex-direction:column;text-align:center;justify-content:center}
+  .cat-page-grid{grid-template-columns:1fr}
+  .artisan-grid{grid-template-columns:1fr}
+  .artisan-card{max-width:400px;margin:0 auto;width:100%}
+  .pd-info .product-title{font-size:26px}
+  .pd-price{font-size:27px}
+  .pd-keypoints{grid-template-columns:1fr}
+  .pd-buy{flex-direction:column;align-items:stretch}
+  .pd-buy .qty-selector{align-self:flex-start}
+  .cart-item{grid-template-columns:80px 1fr;gap:14px}
+  .cart-item img{width:80px;height:80px}
+  .ci-controls{grid-column:1/-1;flex-direction:row;justify-content:space-between;align-items:center}
+  .form-grid{grid-template-columns:1fr}
+  .payment-options{grid-template-columns:1fr}
+  .stat-cards{grid-template-columns:1fr 1fr;gap:14px}
+  .dash-main{padding:20px 16px}
+  .pillars-grid{grid-template-columns:1fr}
+  .contact-cards{grid-template-columns:1fr}
+  .maker-card{grid-template-columns:1fr;text-align:center}
+  .maker-card img{margin:0 auto}
+  .maker-stats{justify-content:center}
+  .tab-btn{padding:11px 14px;font-size:15px}
+  .collection-hero{padding:24px;min-height:240px}
+  .logo-strip .container{gap:18px}
+  .ap-header{flex-direction:column;text-align:center}
+  .ap-header img{margin-top:-120px}
+  .ap-head-actions{margin-left:0}
+  .ap-header .artisan-loc{justify-content:center}
+  .ci-price-row{display:none}
+  .oc-body{grid-template-columns:auto 1fr;gap:14px}
+  .oc-timeline{grid-column:1/-1;justify-content:space-between;flex-wrap:wrap}
+  .oc-actions{grid-column:1/-1;flex-direction:row;justify-content:center}
+  .oc-actions .btn{flex:1}
+  .oc-head{flex-direction:column;align-items:flex-start}
+}
+
+/* Product cards can become narrow even on wider viewports (for example in a
+   three/four-column grid), so size the footer from the card itself. */
+@container (max-width:300px){
+  .product-foot{align-items:stretch;flex-direction:column;gap:10px}
+  .product-foot .price{min-width:0;justify-content:flex-start;gap:7px}
+  .product-foot .add-btn{width:100%;justify-content:center}
+}
+
+/* --- Small mobile (380px) --- */
+@media (max-width:380px){
+  .container{padding:0 16px}
+  .brand-name{font-size:18px}
+  .header-actions .icon-btn{width:40px;height:40px}
+  .stat-cards{grid-template-columns:1fr}
+  .value-grid,.stats-grid{grid-template-columns:1fr}
+  .emboss-quote{padding:16px;font-size:15px}
+}
+
+/* --- Final small-screen safeguards --- */
+@media (max-width:640px){
+  html,body{width:100%;max-width:100%;overflow-x:hidden}
+  main,.site-header,.site-footer{max-width:100%;overflow-x:hidden}
+  .container{width:100%;max-width:100%}
+  .header-inner{gap:10px}
+  .site-header .brand{width:154px;height:46px;flex:1 1 auto;min-width:0}
+  .header-actions{gap:6px}
+  .nav-toggle{display:inline-flex;flex:0 0 42px;width:42px;height:42px}
+  .header-actions .btn{padding-inline:14px}
+  .auth-side{padding:82px 18px 32px}
+  .auth-home{top:24px;right:18px}
+  .auth-side-logo{width:170px;height:48px;margin-bottom:22px}
+  .user-type{gap:8px}
+  .ut-option{padding:14px 8px}
+  .ut-option .ut-ic{width:42px;height:42px;margin-bottom:8px}
+  .ut-option b{font-size:13px}
+  .ut-option small{font-size:11px}
+  .nf-content h1{font-size:28px}
+  .nf-code{margin-bottom:18px}
+  .nf-logo{margin-top:8px!important}
+  .promo-form{flex-wrap:wrap}
+  .promo-form input{min-width:0;flex:1 1 150px}
+  .promo-form button{flex:0 0 auto}
+  .oc-body{padding:16px}
+  .data-table{min-width:500px}
+  .ap-header,.collection-hero,.collection-banner,.contact-form-wrap,.contact-info-panel,.dash-panel{max-width:100%;min-width:0}
+  .ap-head-info,.dash-head{min-width:0}
+}
+
+@media (max-width:420px){
+  .auth-row{flex-direction:row;align-items:center;justify-content:space-between;gap:10px;white-space:nowrap}
+  .auth-row a,.remember{font-size:13px}
+  .site-header .brand{width:118px;flex:0 1 118px}
+  .header-actions .btn{padding-inline:10px;font-size:12px}
+  .header-actions .icon-btn{width:38px;height:38px}
+  .newsletter .container{padding-inline:16px}
+  .nf-actions .btn{width:100%}
+}

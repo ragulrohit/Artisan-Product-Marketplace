@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Orders — Stackly Artisan</title>
+<meta name="description" content="Track and manage your handmade orders on Stackly Artisan.">
+<link rel="icon" type="image/webp" href="images/cat-pottery.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/pages.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<div class="page-load-bar"><i></i></div>
+<div class="topbar"><div class="container"><div class="tb-left"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5h4.2l-2.4 3h2.7l-4 5v-3.8h-1"/></svg>Free shipping across India on orders above ₹3,000</div><div class="tb-right"><a href="artisans.html">Meet the Artisans</a><a href="contact.html">Help &amp; Support</a></div></div></div>
+<div class="dash-layout">
+  <button class="icon-btn dash-mobile-toggle" id="dash-toggle" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+  <div class="dash-overlay" id="dash-overlay"></div>
+  <aside class="dash-sidebar" id="dash-sidebar">
+    <div class="ds-brand"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3.5c3 3.2 5 6 5 9.2a5 5 0 01-10 0c0-3.2 2-6 5-9.2z"/></svg></span><span><span class="brand-name" style="color:#fff;font-size:19px">Stackly <em style="color:var(--gold)">Artisan</em></span><span class="brand-sub" style="color:#A89C86;font-size:11px">Customer Account</span></span></div>
+    <div class="dash-user"><img src="images/artisan-01.webp" alt="Customer"><div><b>Aditi Sharma</b><span>aditi@example.com</span><span class="ds-role">Customer</span></div></div>
+    <nav class="dash-nav">
+      <div class="dn-label">Overview</div>
+      <a href="customer-dashboard.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="5" rx="1.5"/><rect x="13" y="10" width="8" height="11" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/></svg>Dashboard</a>
+      <a href="orders.html" class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6l9-4 9 4v12l-9 4-9-4z"/><path d="M3 6l9 4 9-4M12 10v12"/></svg>My Orders<span class="dn-badge">3</span></a>
+      <a href="order-tracking.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17.5" cy="17.5" r="1.8"/></svg>Order Tracking</a>
+      <div class="dn-label">Shopping</div>
+      <a href="wishlist.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.6l-1-1a5.5 5.5 0 00-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 000-7.8z"/></svg>Wishlist</a>
+      <a href="cart.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.6"/><circle cx="18" cy="20" r="1.6"/><path d="M2.5 3.5h2.6l2.4 11.6a1.8 1.8 0 001.8 1.4h8.4a1.8 1.8 0 001.8-1.4L21 8.5H6"/></svg>Cart</a>
+      <a href="saved-addresses.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.5-7-11a7 7 0 0114 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Saved Addresses</a>
+      <a href="coupons-offers.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 8V5h13v3a3 3 0 010 6v3H4v-3a3 3 0 010-6z"/><path d="M9 8v3M9 16v-3"/></svg>Coupons &amp; Offers</a>
+      <div class="dn-label">Account</div>
+      <a href="profile-settings.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg>Profile Settings</a>
+      <a href="notifications.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 01-3.4 0"/></svg>Notifications</a>
+      <a href="login.html" class="logout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9"/></svg>Log Out</a>
+    </nav>
+  </aside>
+  <main class="dash-main">
+    <div class="dash-head"><div><h1>My Orders</h1><p>Track every handmade order right from the artisan's studio to your door.</p></div></div>
+    <div class="order-filters" style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px">
+      <button class="chip-tab active" data-filter="all">All</button>
+      <button class="chip-tab" data-filter="delivered">Delivered</button>
+      <button class="chip-tab" data-filter="shipped">Shipped</button>
+      <button class="chip-tab" data-filter="processing">Processing</button>
+      <button class="chip-tab" data-filter="cancelled">Cancelled</button>
+    </div>
+    <div id="order-list"></div>
+  </main>
+</div>
+
+<footer class="site-footer"><div class="container"><div class="footer-bottom"><span>© 2026 Stackly Artisan. All Rights Reserved.</span><span class="fb-pay">Crafted with ♥ for handmade</span></div></div></footer>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script>
+(function(){
+  const d = STACKLY.data;
+  const ORDERS = [
+    {id:'SA-4821', date:'22 Aug 2026', item:'p1', qty:1, total:1450, status:'delivered', pay:'Paid via card', placed:'22 Aug', shipped:'24 Aug', delivered:'28 Aug'},
+    {id:'SA-4802', date:'10 Aug 2026', item:'p2', qty:2, total:2500, status:'shipped',  pay:'Paid via UPI', placed:'10 Aug', shipped:'12 Aug', delivered:'—'},
+    {id:'SA-4766', date:'04 Jul 2026', item:'p3', qty:1, total:3200, status:'delivered', pay:'Paid via UPI', placed:'04 Jul', shipped:'08 Jul', delivered:'13 Jul'},
+    {id:'SA-4710', date:'18 Jun 2026', item:'p5', qty:1, total:2400, status:'cancelled', pay:'Refunded', placed:'18 Jun', shipped:'—', delivered:'—'},
+    {id:'SA-4690', date:'01 Jun 2026', item:'p14', qty:3, total:2250, status:'delivered', pay:'Paid via card', placed:'01 Jun', shipped:'03 Jun', delivered:'06 Jun'}
+  ];
+  function timeline(order){
+    const steps = [
+      {k:'placed', l:'Order Placed'}, {k:'shipped', l:'Shipped'},
+      {k:'delivered', l:'Delivered'}
+    ];
+    let reached = true;
+    let html = steps.map(s=>{
+      const done = order.status==='delivered' ? (s.k!=='delivered' || order[s.k]!=='—') : order[s.k]!=='—' && s.k!=='delivered';
+      if(!done) reached=false;
+      return `<div class="tl-step ${done?'done':''} ${reached?'current':''}"><span class="tl-dot"></span><div><b>${s.l}</b><small>${order[s.k]}</small></div></div>`;
+    }).join('');
+    return html;
+  }
+  function render(filter){
+    const list = ORDERS.filter(o=> filter==='all'||o.status===filter);
+    const container = $('#order-list');
+    if(!list.length){ container.innerHTML = '<div class="empty-state"><h3>No orders in this view</h3><p>Choose another filter or browse the collection.</p><a href="shop.html" class="btn btn-primary btn-lg" style="margin-top:16px">Shop Handmade</a></div>'; return; }
+    container.innerHTML = list.map(o=>{
+      const p = d.getProduct(o.item);
+      return `
+      <div class="order-card" data-status="${o.status}">
+        <div class="oc-head"><div><span class="order-id">${o.id}</span><span class="oc-date">Placed ${o.date}</span></div><span class="status ${o.status}">${o.status.charAt(0).toUpperCase()+o.status.slice(1)}</span></div>
+        <div class="oc-body">
+          <img src="${p.img}" alt="${p.title}">
+          <div class="oc-info"><b>${p.title}</b><span>Qty ${o.qty} · ${d.getArtisan(p.artisan).name}</span><span class="oc-total">${d.formatPrice(o.total)}</span></div>
+          <div class="oc-timeline">${timeline(o)}</div>
+        </div>
+      </div>`;
+    }).join('');
+  }
+  $$('.order-filters .chip-tab').forEach(b=> b.addEventListener('click', ()=>{
+    $$('.order-filters .chip-tab').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    render(b.dataset.filter);
+  }));
+  render('all');
+})();
+</script>
+</body>
+</html>

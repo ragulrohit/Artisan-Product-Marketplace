@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile Settings — Stackly Artisan</title>
+<meta name="description" content="Update your personal details, password and notification preferences on Stackly Artisan.">
+<link rel="icon" type="image/webp" href="images/cat-pottery.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/pages.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<div class="page-load-bar"><i></i></div>
+<div class="topbar"><div class="container"><div class="tb-left"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5h4.2l-2.4 3h2.7l-4 5v-3.8h-1"/></svg>Free shipping across India on orders above ₹3,000</div><div class="tb-right"><a href="artisans.html">Meet the Artisans</a><a href="contact.html">Help &amp; Support</a></div></div></div>
+<div class="dash-layout">
+  <button class="icon-btn dash-mobile-toggle" id="dash-toggle" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+  <div class="dash-overlay" id="dash-overlay"></div>
+  <aside class="dash-sidebar" id="dash-sidebar">
+    <div class="ds-brand"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3.5c3 3.2 5 6 5 9.2a5 5 0 01-10 0c0-3.2 2-6 5-9.2z"/></svg></span><span><span class="brand-name" style="color:#fff;font-size:19px">Stackly <em style="color:var(--gold)">Artisan</em></span><span class="brand-sub" style="color:#A89C86;font-size:11px">Customer Account</span></span></div>
+    <div class="dash-user"><img src="images/artisan-01.webp" alt="Customer"><div><b>Aditi Sharma</b><span>aditi@example.com</span><span class="ds-role">Customer</span></div></div>
+    <nav class="dash-nav">
+      <div class="dn-label">Overview</div>
+      <a href="customer-dashboard.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="5" rx="1.5"/><rect x="13" y="10" width="8" height="11" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/></svg>Dashboard</a>
+      <a href="orders.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6l9-4 9 4v12l-9 4-9-4z"/><path d="M3 6l9 4 9-4M12 10v12"/></svg>My Orders<span class="dn-badge">3</span></a>
+      <a href="order-tracking.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17.5" cy="17.5" r="1.8"/></svg>Order Tracking</a>
+      <div class="dn-label">Shopping</div>
+      <a href="wishlist.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.6l-1-1a5.5 5.5 0 00-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 000-7.8z"/></svg>Wishlist</a>
+      <a href="cart.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.6"/><circle cx="18" cy="20" r="1.6"/><path d="M2.5 3.5h2.6l2.4 11.6a1.8 1.8 0 001.8 1.4h8.4a1.8 1.8 0 001.8-1.4L21 8.5H6"/></svg>Cart</a>
+      <a href="saved-addresses.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.5-7-11a7 7 0 0114 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Saved Addresses</a>
+      <a href="coupons-offers.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 8V5h13v3a3 3 0 010 6v3H4v-3a3 3 0 010-6z"/><path d="M9 8v3M9 16v-3"/></svg>Coupons &amp; Offers</a>
+      <div class="dn-label">Account</div>
+      <a href="profile-settings.html" class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg>Profile Settings</a>
+      <a href="notifications.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 01-3.4 0"/></svg>Notifications</a>
+      <a href="login.html" class="logout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9"/></svg>Log Out</a>
+    </nav>
+  </aside>
+  <main class="dash-main">
+    <div class="dash-head"><div><h1>Profile Settings</h1><p>Keep your details and preferences up to date.</p></div></div>
+
+    <div class="dash-panel">
+      <div class="profile-avatar">
+        <img src="images/artisan-01.webp" alt="Profile photo">
+        <div class="pa-name"><b>Aditi Sharma</b><span>Member since Jun 2024 · aditi@example.com</span></div>
+        <button class="btn btn-ghost btn-sm" style="margin-left:auto" onclick="window.STACKLY.core.toast('Photo upload is a preview feature.')">Change Photo</button>
+      </div>
+    </div>
+
+    <div class="dash-panel" style="margin-top:20px">
+      <h3>Personal Information</h3>
+      <form id="profile-form" novalidate>
+        <div class="form-grid">
+          <div class="field"><label for="pf-name">Full Name</label><input type="text" id="pf-name" value="Aditi Sharma"></div>
+          <div class="field"><label for="pf-phone">Phone</label><input type="text" id="pf-phone" value="9876543210"></div>
+          <div class="field full"><label for="pf-email">Email Address</label><input type="email" id="pf-email" value="aditi@example.com"></div>
+        </div>
+        <button type="submit" class="btn btn-primary" style="margin-top:16px">Save Changes</button>
+      </form>
+    </div>
+
+    <div class="dash-panel" style="margin-top:20px">
+      <h3>Change Password</h3>
+      <form id="pass-form" novalidate>
+        <div class="form-grid">
+          <div class="field"><label for="pw-current">Current Password</label><input type="password" id="pw-current" placeholder="••••••••"><span class="err">Enter your current password</span></div>
+          <div class="field"><label for="pw-new">New Password</label><input type="password" id="pw-new" placeholder="At least 8 characters"><span class="err">Must be at least 8 characters</span></div>
+        </div>
+        <button type="submit" class="btn btn-outline" style="margin-top:16px">Update Password</button>
+      </form>
+    </div>
+
+    <div class="dash-panel" style="margin-top:20px">
+      <h3>Notifications</h3>
+      <div class="profile-option"><div><b>Order updates</b><span>Get text &amp; email alerts for your orders</span></div><label class="switch"><input type="checkbox" checked><span class="sw-track"></span></label></div>
+      <div class="profile-option"><div><b>New artisan collections</b><span>Be first to hear about fresh handmade drops</span></div><label class="switch"><input type="checkbox"><span class="sw-track"></span></label></div>
+      <div class="profile-option"><div><b>Coupons &amp; offers</b><span>Personalised deals and promo codes</span></div><label class="switch"><input type="checkbox" checked><span class="sw-track"></span></label></div>
+    </div>
+  </main>
+</div>
+
+<footer class="site-footer"><div class="container"><div class="footer-grid">
+  <div class="f-brand"><a href="index.html" class="brand" style="flex-direction:column;align-items:flex-start;gap:12px"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3.5c3 3.2 5 6 5 9.2a5 5 0 01-10 0c0-3.2 2-6 5-9.2z"/></svg></span><span><span class="brand-name">Stackly <em>Artisan</em></span></span></a><p>A premium marketplace connecting the world with independent artisans — preserving traditional craft, one beautiful piece at a time.</p><div class="social"><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8.5V6.8c0-.8.2-1.3 1.4-1.3H17V2.5h-2.6C11.2 2.5 10 4 10 6.6v1.9H8v3h2V21.5h4V11.5h2.7l.3-3z"/></svg></a><a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.2 2.6 7.8 6.3 9.3-.1-.8-.2-2 0-2.9l1.2-5s-.3-.6-.3-1.5c0-1.4.8-2.4 1.8-2.4.9 0 1.3.6 1.3 1.4 0 .9-.6 2.2-.9 3.4-.2 1 .5 1.8 1.5 1.8 1.8 0 3.2-1.9 3.2-4.7 0-2.4-1.7-4.1-4.2-4.1-2.9 0-4.6 2.2-4.6 4.4 0 .9.3 1.8.8 2.3.1.1.1.2.1.3l-.3 1.2c0 .2-.2.2-.4.1-1.2-.6-2-2.4-2-3.9 0-3.2 2.3-6.1 6.7-6.1 3.5 0 6.3 2.5 6.3 5.9 0 3.5-2.2 6.3-5.3 6.3-1 0-2-.5-2.3-1.2l-.6 2.4c-.2.9-.8 1.9-1.2 2.6.9.3 1.9.4 2.9.4 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg></a><a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8z"/><path d="m9.6 15.5 6-3.5-6-3.5v7z" fill="var(--espresso)"/></svg></a></div></div>
+  <div class="f-col"><h6>Explore</h6><ul><li><a href="shop.html">Shop</a></li><li><a href="categories.html">Categories</a></li><li><a href="collections.html">Collections</a></li><li><a href="artisans.html">Artisans</a></li></ul></div><div class="f-col"><h6>Company</h6><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="about.html#story">Our Story</a></li><li><a href="about.html#sustain">Sustainability</a></li></ul></div><div class="f-col"><h6>Customer</h6><ul><li><a href="orders.html">Orders</a></li><li><a href="wishlist.html">Wishlist</a></li><li><a href="contact.html">Shipping</a></li><li><a href="contact.html">Returns</a></li></ul></div><div class="f-col"><h6>Get in Touch</h6><ul><li><a href="mailto:hello@stacklyartisan.com">hello@stacklyartisan.com</a></li><li><a href="tel:+919876543210">+91 98765 43210</a></li><li><span style="font-size:14px;color:#CDC3AE">Mon–Sat, 10am–7pm IST</span></li></ul></div>
+</div><div class="footer-bottom"><span>© 2026 Stackly Artisan. All Rights Reserved.</span><span class="fb-pay">Crafted with ♥ for handmade</span></div></div></footer>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script>
+(function(){
+  const core = STACKLY.core;
+  $('#profile-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    let ok=true, first=null;
+    const name=$('#pf-name'); const nf=name.closest('.field');
+    const nameOk = name.value.trim().length>=3;
+    nf.classList.toggle('invalid', !nameOk); if(!nameOk){ ok=false; first=first||name; }
+    const ph=$('#pf-phone'); const pf=ph.closest('.field');
+    const phOk = /^\d{10}$/.test(ph.value.trim());
+    pf.classList.toggle('invalid', !phOk); if(!phOk){ ok=false; first=first||ph; }
+    if(!ok){ first && first.focus(); return; }
+    core.toast('Profile updated successfully!');
+  });
+  $('#pass-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    let ok=true, first=null;
+    const cur=$('#pw-current'); const cf=cur.closest('.field');
+    const curOk = cur.value.length>0;
+    cf.classList.toggle('invalid', !curOk); if(!curOk){ ok=false; first=first||cur; }
+    const neu=$('#pw-new'); const nf2=neu.closest('.field');
+    const neuOk = neu.value.length>=8;
+    nf2.classList.toggle('invalid', !neuOk); if(!neuOk){ ok=false; first=first||neu; }
+    if(!ok){ first && first.focus(); return; }
+    core.toast('Password updated successfully!');
+    $('#pass-form').reset();
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artisan Profile — Stackly Artisan</title>
+<meta name="description" content="Explore an artisan's story, craft, experience and handmade products on Stackly Artisan.">
+<link rel="icon" type="image/webp" href="images/cat-pottery.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/pages.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<div class="page-load-bar"><i></i></div>
+<div class="topbar"><div class="container"><div class="tb-left"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5h4.2l-2.4 3h2.7l-4 5v-3.8h-1"/></svg>Free shipping across India on orders above ₹3,000</div><div class="tb-right"><a href="artisans.html">Meet the Artisans</a><a href="contact.html">Help &amp; Support</a></div></div></div>
+<header class="site-header"><div class="container header-inner">
+  <a href="index.html" class="brand" aria-label="Stackly Artisan"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3.5c3 3.2 5 6 5 9.2a5 5 0 01-10 0c0-3.2 2-6 5-9.2z"/><path d="M12 9.5v5.2"/></svg></span><span><span class="brand-name">Stackly <em>Artisan</em></span><span class="brand-sub">Handcrafted Marketplace</span></span></a>
+  <nav class="main-nav" aria-label="Primary"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="categories.html">Categories</a><a href="artisans.html" class="active">Artisans</a><a href="collections.html">Collections</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+  <div class="header-actions"><button class="icon-btn search-trigger" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button><a href="wishlist.html" class="icon-btn" aria-label="Wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.6l-1-1a5.5 5.5 0 00-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 000-7.8z"/></svg><span class="icon-badge" data-wish-count style="display:none">0</span></a><a href="cart.html" class="icon-btn" aria-label="Cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.6"/><circle cx="18" cy="20" r="1.6"/><path d="M2.5 3.5h2.6l2.4 11.6a1.8 1.8 0 001.8 1.4h8.4a1.8 1.8 0 001.8-1.4L21 8.5H6"/></svg><span class="icon-badge" data-cart-count style="display:none">0</span></a><a href="login.html" class="btn btn-primary btn-sm">Login</a><button class="nav-toggle" id="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button></div>
+</div></header>
+<div class="mobile-nav" id="mobile-nav"><button class="icon-btn mn-close" id="mn-close" aria-label="Close" style="color:#fff;border-color:rgba(255,255,255,.2)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg></button><div class="brand" style="margin-bottom:24px"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3.5c3 3.2 5 6 5 9.2a5 5 0 01-10 0c0-3.2 2-6 5-9.2z"/></svg></span><span><span class="brand-name" style="color:#fff">Stackly <em>Artisan</em></span></span></div><a href="index.html" class="mn-link">Home</a><a href="shop.html" class="mn-link">Shop</a><a href="categories.html" class="mn-link">Categories</a><a href="artisans.html" class="mn-link">Artisans</a><a href="collections.html" class="mn-link">Collections</a><a href="about.html" class="mn-link">About</a><a href="contact.html" class="mn-link">Contact</a><div class="m-icon-row"><a href="wishlist.html">Wishlist</a><a href="cart.html">Cart</a></div><div class="mn-actions"><a href="login.html" class="btn btn-primary">Login</a><a href="create-account.html" class="btn btn-ghost" style="border-color:rgba(255,255,255,.3);color:#fff">Create Account</a></div></div>
+<div class="modal-backdrop search-overlay" id="search-overlay"><div class="modal" style="max-width:640px;background:transparent;box-shadow:none"><button class="modal-close" id="search-close" aria-label="Close search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg></button><form class="search-bar-lg" action="search.html" method="get" style="background:#fff;margin:0;box-shadow:var(--shadow-lg)"><input type="search" name="q" placeholder="Search products, artisans, categories..." aria-label="Search"><button type="submit" aria-label="Submit search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button></form></div></div>
+
+<main>
+<section class="sec" style="padding-top:34px">
+  <div class="container">
+    <div class="pd-breadcrumb" id="ap-breadcrumb"></div>
+    <div class="ap-cover"><img id="ap-cover" src="images/craft-workshop.webp" alt=""></div>
+    <div class="ap-header">
+      <img id="ap-avatar" src="images/artisan-01.webp" alt="Artisan">
+      <div class="ap-head-info">
+        <h2 id="ap-name"></h2>
+        <div class="artisan-loc" id="ap-loc"></div>
+        <span class="artisan-spec" id="ap-craft"></span>
+        <div style="display:flex;align-items:center;gap:8px;margin-top:8px"><span class="stars" id="ap-stars"></span><span class="rating-count">Artisan rating</span></div>
+      </div>
+      <div class="ap-head-actions">
+        <span class="verif"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8l7.5 3v5.4c0 5-3.4 8.3-7.5 10-4.1-1.7-7.5-5-7.5-10V5.8z"/><path d="M9 12l2.2 2.2L15.5 10"/></svg>Verified Artisan</span>
+        <a href="shop.html" class="btn btn-primary btn-sm" id="ap-shop">Shop Works</a>
+      </div>
+    </div>
+
+    <div class="ap-body">
+      <div class="ap-story">
+        <div class="ap-story-card" style="background:var(--surface);border:1px solid var(--border-soft);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow-sm)">
+          <h3 id="ap-story-title"></h3>
+          <p id="ap-bio"></p>
+          <p id="ap-story"></p>
+          <div style="margin-top:6px"><img id="ap-workshop" src="images/craft-workshop.webp" alt="Artisan workshop" style="width:100%;max-width:560px;border-radius:var(--radius);object-fit:cover;aspect-ratio:16/9;margin-top:14px"></div>
+        </div>
+        <!-- featured collection -->
+        <div style="margin-top:34px">
+          <h3 style="margin-bottom:22px">Handmade Collection</h3>
+          <div class="product-grid cols-3" id="ap-products"></div>
+        </div>
+        <!-- reviews -->
+        <div class="ap-reviews">
+          <h3 style="margin-bottom:18px">Customer Reviews</h3>
+          <div id="ap-reviews"></div>
+        </div>
+      </div>
+      <aside>
+        <div class="ap-stats-box">
+          <h5>At a Glance</h5>
+          <div class="ap-stat-row"><span>Total products</span><b id="st-products"></b></div>
+          <div class="ap-stat-row"><span>Years of experience</span><b id="st-exp"></b></div>
+          <div class="ap-stat-row"><span>Location</span><b id="st-loc"></b></div>
+          <div class="ap-stat-row"><span>Specialty</span><b id="st-craft"></b></div>
+          <div class="ap-stat-row"><span>Orders fulfilled</span><b id="st-orders"></b></div>
+        </div>
+        <div class="ap-stats-box" style="margin-top:18px;background:var(--grad-dark);color:var(--beige)">
+          <h5 style="color:var(--gold)">Support this Artisan</h5>
+          <p style="font-size:14px;color:#C9BFA6;margin-bottom:14px">Every purchase puts fair income directly into the hands of the maker.</p>
+          <a href="shop.html" class="btn btn-gold btn-sm btn-block">Explore Their Craft</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer"><div class="container"><div class="footer-grid">
+  <div class="f-brand"><a href="index.html" class="brand" style="flex-direction:column;align-items:flex-start;gap:12px"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3.5c3 3.2 5 6 5 9.2a5 5 0 01-10 0c0-3.2 2-6 5-9.2z"/></svg></span><span><span class="brand-name">Stackly <em>Artisan</em></span></span></a><p>A premium marketplace connecting the world with independent artisans — preserving traditional craft, one beautiful piece at a time.</p><div class="social"><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8.5V6.8c0-.8.2-1.3 1.4-1.3H17V2.5h-2.6C11.2 2.5 10 4 10 6.6v1.9H8v3h2V21.5h4V11.5h2.7l.3-3z"/></svg></a><a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.2 2.6 7.8 6.3 9.3-.1-.8-.2-2 0-2.9l1.2-5s-.3-.6-.3-1.5c0-1.4.8-2.4 1.8-2.4.9 0 1.3.6 1.3 1.4 0 .9-.6 2.2-.9 3.4-.2 1 .5 1.8 1.5 1.8 1.8 0 3.2-1.9 3.2-4.7 0-2.4-1.7-4.1-4.2-4.1-2.9 0-4.6 2.2-4.6 4.4 0 .9.3 1.8.8 2.3.1.1.1.2.1.3l-.3 1.2c0 .2-.2.2-.4.1-1.2-.6-2-2.4-2-3.9 0-3.2 2.3-6.1 6.7-6.1 3.5 0 6.3 2.5 6.3 5.9 0 3.5-2.2 6.3-5.3 6.3-1 0-2-.5-2.3-1.2l-.6 2.4c-.2.9-.8 1.9-1.2 2.6.9.3 1.9.4 2.9.4 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg></a><a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8z"/><path d="m9.6 15.5 6-3.5-6-3.5v7z" fill="var(--espresso)"/></svg></a></div></div>
+  <div class="f-col"><h6>Explore</h6><ul><li><a href="shop.html">Shop</a></li><li><a href="categories.html">Categories</a></li><li><a href="collections.html">Collections</a></li><li><a href="artisans.html">Artisans</a></li></ul></div><div class="f-col"><h6>Company</h6><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="about.html#story">Our Story</a></li><li><a href="about.html#sustain">Sustainability</a></li></ul></div><div class="f-col"><h6>Customer</h6><ul><li><a href="orders.html">Orders</a></li><li><a href="wishlist.html">Wishlist</a></li><li><a href="contact.html">Shipping</a></li><li><a href="contact.html">Returns</a></li></ul></div><div class="f-col"><h6>Get in Touch</h6><ul><li><a href="mailto:hello@stacklyartisan.com">hello@stacklyartisan.com</a></li><li><a href="tel:+919876543210">+91 98765 43210</a></li><li><span style="font-size:14px;color:#CDC3AE">Mon–Sat, 10am–7pm IST</span></li></ul></div>
+</div><div class="footer-bottom"><span>© 2026 Stackly Artisan. All Rights Reserved.</span><span class="fb-pay">Crafted with ♥ for handmade</span></div></div></footer>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script>
+(function(){
+  const d = STACKLY.data, core = STACKLY.core;
+  const id = new URLSearchParams(location.search).get('id') || 'a1';
+  const a = d.getArtisan(id);
+  if(!a){ location.href='notfound.html'; return; }
+  const prods = d.artisanProducts(a.id);
+  document.title = a.name + ' — Artisan · Stackly Artisan';
+  $('#ap-breadcrumb').innerHTML = `<a href="index.html">Home</a> <span>›</span> <a href="artisans.html">Artisans</a> <span>›</span> <span>${a.name}</span>`;
+  $('#ap-cover').src = a.src;
+  $('#ap-avatar').src = a.img;
+  $('#ap-name').textContent = a.name;
+  $('#ap-loc').innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M12 21s-7-5.5-7-11a7 7 0 0114 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>${a.loc}`;
+  $('#ap-craft').textContent = a.craft;
+  $('#ap-stars').innerHTML = core.starsHTML(a.rating);
+  $('#ap-story-title').textContent = 'The Story of ' + a.name.split(' ')[0];
+  $('#ap-bio').textContent = a.bio;
+  $('#ap-story').textContent = "'" + a.name + "' has spent " + a.exp + " perfecting " + a.craft.toLowerCase() + ". Working from a small studio in " + a.loc.split(',')[0] + ", they blend time-honoured techniques with a contemporary sensibility, using only natural, sustainable materials. Every piece is made slowly — shaped, finished and quality-checked entirely by hand. When you buy from " + a.name.split(' ')[0] + ", you take home a genuine piece of craft and directly support a livelihood, a family and a centuries-old tradition.";
+  $('#ap-workshop').src = a.src;
+  $('#st-products').textContent = prods.length;
+  $('#st-exp').textContent = a.exp;
+  $('#st-loc').textContent = a.loc.split(',')[0];
+  $('#st-craft').textContent = a.craft;
+  $('#st-orders').textContent = (prods.length*180) + '+';
+  $('#ap-shop').href = 'shop.html?cat=' + (prods[0]?prods[0].category:'all');
+  $('#ap-products').innerHTML = prods.slice(0,3).map(p=> core.productCardHTML(p)).join('');
+  $$('#ap-products .add-btn').forEach(btn=> btn.addEventListener('click', ()=>{ core.addToCart(btn.dataset.id); const l=btn.innerHTML; btn.classList.add('added'); btn.innerHTML='✓ Added'; setTimeout(()=>{btn.classList.remove('added');btn.innerHTML=l;},1400); }));
+  $$('#ap-products .wish-btn').forEach(btn=> btn.addEventListener('click', (e)=>{e.preventDefault();e.stopPropagation();core.toggleWish(btn.dataset.id);btn.classList.toggle('active',core.inWish(btn.dataset.id));}));
+  const names=['Priya','Arjun','Ritu','Meera','Vikram','Ananya'];
+  $('#ap-reviews').innerHTML = Array.from({length:3},(_,i)=>{
+    const r = 5 - i*0.4;
+    return `<div style="display:flex;gap:14px;align-items:flex-start;background:var(--surface);border:1px solid var(--border-soft);border-radius:14px;padding:16px;margin-bottom:12px">
+      <img src="images/artisan-0${(i+1) % 6 + 1}.webp" style="width:48px;height:48px;border-radius:50%;object-fit:cover" alt="">
+      <div><div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap"><b style="color:var(--brown)">${names[i]}</b><span class="stars" style="color:var(--gold)">${core.starsHTML(r)}</span><span style="font-size:12px;color:var(--text-3)">Verified buyer</span></div>
+      <p style="font-size:14px;color:var(--brown-3);margin-top:6px">"${a.name.split(' ')[0]}'s craft is exceptional. Beautiful workmanship and warm, personal service. A true artisan."</p></div></div>`;
+  }).join('');
+})();
+</script>
+</body>
+</html>

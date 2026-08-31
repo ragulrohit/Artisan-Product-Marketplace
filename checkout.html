@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout — Stackly Artisan</title>
+<meta name="description" content="Secure checkout for your handmade purchases at Stackly Artisan — customer details, shipping address and payment.">
+<link rel="icon" type="image/webp" href="images/cat-pottery.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/pages.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<div class="page-load-bar"><i></i></div>
+<div class="topbar"><div class="container"><div class="tb-left"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5h4.2l-2.4 3h2.7l-4 5v-3.8h-1"/></svg>Free shipping across India on orders above ₹3,000</div><div class="tb-right"><a href="artisans.html">Meet the Artisans</a><a href="contact.html">Help &amp; Support</a></div></div></div>
+<header class="site-header"><div class="container header-inner">
+  <a href="index.html" class="brand" aria-label="Stackly Artisan"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3.5c3 3.2 5 6 5 9.2a5 5 0 01-10 0c0-3.2 2-6 5-9.2z"/><path d="M12 9.5v5.2"/></svg></span><span><span class="brand-name">Stackly <em>Artisan</em></span><span class="brand-sub">Handcrafted Marketplace</span></span></a>
+  <nav class="main-nav" aria-label="Primary"><a href="index.html">Home</a><a href="shop.html" class="active">Shop</a><a href="categories.html">Categories</a><a href="artisans.html">Artisans</a><a href="collections.html">Collections</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+  <div class="header-actions"><a href="cart.html" class="icon-btn" aria-label="Cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.6"/><circle cx="18" cy="20" r="1.6"/><path d="M2.5 3.5h2.6l2.4 11.6a1.8 1.8 0 001.8 1.4h8.4a1.8 1.8 0 001.8-1.4L21 8.5H6"/></svg><span class="icon-badge" data-cart-count style="display:none">0</span></a></div>
+</div></header>
+
+<main>
+<section class="sec" style="padding-top:40px">
+  <div class="container">
+    <div class="pd-breadcrumb"><a href="index.html">Home</a> <span>›</span> <a href="cart.html">Cart</a> <span>›</span> <span>Checkout</span></div>
+    <h1 style="font-size:32px;margin-bottom:28px">Secure Checkout</h1>
+    <div class="checkout-layout">
+      <form class="checkout-form" id="checkout-form" novalidate>
+        <!-- Customer info -->
+        <div class="ck-section">
+          <h3><span class="step">1</span> Customer Information</h3>
+          <div class="form-grid">
+            <div class="field"><label>Full Name <span class="req">*</span></label><input type="text" id="ck-name" placeholder="e.g. Aditi Sharma"><span class="err">Please enter your full name</span></div>
+            <div class="field"><label>Email <span class="req">*</span></label><input type="email" id="ck-email" placeholder="you@example.com"><span class="err">Please enter a valid email</span></div>
+            <div class="field full"><label>Phone <span class="req">*</span></label><input type="tel" id="ck-phone" placeholder="+91 98765 43210"><span class="err">Please enter a valid phone number</span></div>
+          </div>
+        </div>
+        <!-- Shipping -->
+        <div class="ck-section">
+          <h3><span class="step">2</span> Shipping Address</h3>
+          <div class="form-grid">
+            <div class="field full"><label>Address <span class="req">*</span></label><input type="text" id="ck-address" placeholder="House / street / area"><span class="err">Please enter your address</span></div>
+            <div class="field"><label>City <span class="req">*</span></label><input type="text" id="ck-city" placeholder="City"><span class="err">Required</span></div>
+            <div class="field"><label>State <span class="req">*</span></label><input type="text" id="ck-state" placeholder="State"><span class="err">Required</span></div>
+            <div class="field"><label>Postal Code <span class="req">*</span></label><input type="text" id="ck-pin" placeholder="110001"><span class="err">Required</span></div>
+            <div class="field"><label>Country</label><select id="ck-country"><option>India</option><option>United Kingdom</option><option>United States</option><option>Australia</option><option>UAE</option></select></div>
+          </div>
+        </div>
+        <!-- Payment -->
+        <div class="ck-section">
+          <h3><span class="step">3</span> Payment Method</h3>
+          <div class="payment-options" id="pay-options">
+            <div class="pay-option selected" data-pay="card">
+              <span class="po-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 9.5h19M6.5 15h4"/></svg></span>
+              <span><b>Credit / Debit Card</b><small>Visa, Mastercard, RuPay</small></span>
+              <span class="po-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>
+            </div>
+            <div class="pay-option" data-pay="upi">
+              <span class="po-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8l2.2 4.6 5 .7-3.6 3.5.8 5-4.4-2.3-4.4 2.3.8-5L4.8 8l5-.7z"/></svg></span>
+              <span><b>UPI</b><small>GPay, PhonePe, Paytm</small></span>
+              <span class="po-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>
+            </div>
+            <div class="pay-option" data-pay="net">
+              <span class="po-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6.5" width="19" height="11" rx="2"/><path d="M8 6.5V5a2 2 0 012-2h4a2 2 0 012 2v1.5M8 13h8"/></svg></span>
+              <span><b>Net Banking</b><small>All major banks</small></span>
+              <span class="po-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>
+            </div>
+            <div class="pay-option" data-pay="cod">
+              <span class="po-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8l7.5 3v5.4c0 5-3.4 8.3-7.5 10-4.1-1.7-7.5-5-7.5-10V5.8z"/></svg></span>
+              <span><b>Cash on Delivery</b><small>Pay at your doorstep</small></span>
+              <span class="po-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>
+            </div>
+          </div>
+          <!-- card fields -->
+          <div class="pay-fields show" id="pay-card">
+            <div class="field full"><label>Card Number <span class="req">*</span></label><input type="text" id="ck-card" placeholder="1234 5678 9012 3456"><span class="err">Required</span></div>
+            <div class="field"><label>Expiry <span class="req">*</span></label><input type="text" placeholder="MM/YY"></div>
+            <div class="field"><label>CVV <span class="req">*</span></label><input type="password" placeholder="•••"></div>
+          </div>
+          <div class="pay-fields" id="pay-upi">
+            <div class="field full"><label>UPI ID <span class="req">*</span></label><input type="text" placeholder="yourname@upi"></div>
+          </div>
+          <div class="pay-fields" id="pay-net">
+            <div class="field full"><label>Select Bank <span class="req">*</span></label><select><option>HDFC Bank</option><option>ICICI Bank</option><option>SBI</option><option>Axis Bank</option><option>Kotak</option></select></div>
+          </div>
+          <div class="pay-fields" id="pay-cod">
+            <p style="font-size:14px;color:var(--text-2);margin-top:10px">Pay in cash when your handmade order arrives. A nominal ₹50 COD fee may apply.</p>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block btn-lg">Place Order · <span id="place-total">₹0</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </form>
+
+      <!-- order summary -->
+      <aside>
+        <div class="order-summary">
+          <h3>Order Summary</h3>
+          <div id="os-items"></div>
+          <div style="border-top:1px solid var(--border);margin:16px 0;padding-top:14px">
+            <div class="cs-row"><span>Subtotal</span><b id="os-sub">₹0</b></div>
+            <div class="cs-row"><span>Shipping</span><b id="os-ship">₹0</b></div>
+            <div class="cs-row"><span>Discount</span><b id="os-discount" style="color:var(--green-2)"></b></div>
+            <div class="cs-row big"><span>Total</span><b id="os-total">₹0</b></div>
+          </div>
+          <div class="cs-actions"><a href="cart.html" class="btn btn-ghost btn-block">Back to Cart</a></div>
+          <div style="display:flex;align-items:center;justify-content:center;gap:8px;margin-top:16px;font-size:12.5px;color:var(--text-3)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M12 2.8l7.5 3v5.4c0 5-3.4 8.3-7.5 10-4.1-1.7-7.5-5-7.5-10V5.8z"/><path d="M9 12l2.2 2.2L15.5 10"/></svg>256-bit encrypted &amp; secure</div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer"><div class="container"><div class="footer-bottom"><span>© 2026 Stackly Artisan. All Rights Reserved.</span><span class="fb-pay">Crafted with ♥ for handmade</span></div></div></footer>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script>
+(function(){
+  const d = STACKLY.data, core = STACKLY.core;
+  const cart = core.cart;
+
+  function fmt(v){ return d.formatPrice(v); }
+
+  function renderSummary(){
+    let sub=0; const items=[];
+    cart.forEach(i=>{ const p = d.getProduct(i.id); if(!p) return; sub += p.price*i.qty;
+      items.push(`<div class="os-item"><img src="${p.img}" alt="${p.title}"><span class="os-qty">${i.qty}</span><div><b>${p.title}</b><span>${fmt(p.price)}</span></div><span class="os-price">${fmt(p.price*i.qty)}</span></div>`);
+    });
+    $('#os-items').innerHTML = items.join('');
+    if(!cart.length){ $('#os-items').innerHTML = '<p style="font-size:14px;color:var(--text-2)">Your cart is empty.</p>'; }
+    const ship = sub>3000||!sub ? 0 : 120;
+    let disc = 0; const promo=(localStorage.getItem('sa_promo')||'').toLowerCase();
+    if(promo==='handmade10' && sub) disc = Math.round(sub*0.1);
+    $('#os-sub').textContent = fmt(sub);
+    $('#os-ship').textContent = ship ? fmt(ship) : 'FREE';
+    $('#os-discount').textContent = disc ? '− '+fmt(disc) : '';
+    const total = sub + ship - disc;
+    $('#os-total').textContent = fmt(total);
+    $('#place-total').textContent = fmt(total);
+  }
+
+  /* payment switching */
+  $$('.pay-option').forEach(opt=> opt.addEventListener('click', ()=>{
+    $$('.pay-option').forEach(o=>o.classList.remove('selected'));
+    opt.classList.add('selected');
+    $$('.pay-fields').forEach(f=>f.classList.remove('show'));
+    const id = opt.dataset.pay;
+    const target = $('#pay-'+id);
+    if(target) target.classList.add('show');
+  }));
+
+  /* validation + submit */
+  const validators = {
+    'ck-name': v=> v.trim().length>=3,
+    'ck-email': v=> /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()),
+    'ck-phone': v=> v.trim().length>=10,
+    'ck-address': v=> v.trim().length>=5,
+    'ck-city': v=> !!v.trim(),
+    'ck-state': v=> !!v.trim(),
+    'ck-pin': v=> /^[0-9]{5,6}$/.test(v.trim())
+  };
+
+  $('#checkout-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    let ok = true, firstBad=null;
+    Object.keys(validators).forEach(id=>{
+      const f = $('#'+id).closest('.field');
+      const v = $('#'+id).value;
+      const pass = validators[id](v);
+      f.classList.toggle('invalid', !pass);
+      if(!pass){ ok=false; firstBad = firstBad || $('#'+id); }
+    });
+    if(!ok){ firstBad.focus(); core.toast('Please complete the required fields.','error'); return; }
+    // simulate placing order
+    core.toast('Order placed successfully! Thank you for choosing handmade.');
+    localStorage.removeItem('sa_cart'); localStorage.removeItem('sa_promo');
+    setTimeout(()=>{ location.href = 'orders.html'; }, 1600);
+  });
+
+  renderSummary();
+})();
+</script>
+</body>
+</html>

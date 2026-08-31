@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artisan Studio — Stackly Artisan</title>
+<meta name="description" content="Studio dashboard for artisans — manage products, track sales and grow your handmade business.">
+<link rel="icon" type="image/webp" href="images/cat-pottery.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/pages.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<style>.topbar,.site-header,.site-footer{display:none}.dash-layout{min-height:100vh}.dash-sidebar{top:0;height:100vh}.ds-brand{justify-content:center}.ds-brand>.brand-mark,.ds-brand>span:last-child{display:none}.ds-brand:before{content:"";display:block;width:190px;height:52px;background:url('images/stackly-logo.webp') center/contain no-repeat;filter:brightness(0) invert(1)}</style>
+<div class="page-load-bar"><i></i></div>
+<div class="topbar"><div class="container"><div class="tb-left"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5h4.2l-2.4 3h2.7l-4 5v-3.8h-1"/></svg>Free shipping across India on orders above ₹3,000</div><div class="tb-right"><a href="artisans.html">Meet the Artisans</a><a href="contact.html">Help &amp; Support</a></div></div></div>
+<header class="site-header"><div class="container header-inner">
+  <a href="index.html" class="brand" aria-label="Stackly Artisan"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3.5c3 3.2 5 6 5 9.2a5 5 0 01-10 0c0-3.2 2-6 5-9.2z"/><path d="M12 9.5v5.2"/></svg></span><span><span class="brand-name">Stackly <em>Artisan</em></span><span class="brand-sub">Handcrafted Marketplace</span></span></a>
+  <nav class="main-nav" aria-label="Primary"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="categories.html">Categories</a><a href="artisans.html">Artisans</a><a href="collections.html">Collections</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+  <div class="header-actions"><a href="wishlist.html" class="icon-btn" aria-label="Wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.6l-1-1a5.5 5.5 0 00-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 000-7.8z"/></svg><span class="icon-badge" data-wish-count style="display:none">0</span></a><a href="cart.html" class="icon-btn" aria-label="Cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.6"/><circle cx="18" cy="20" r="1.6"/><path d="M2.5 3.5h2.6l2.4 11.6a1.8 1.8 0 001.8 1.4h8.4a1.8 1.8 0 001.8-1.4L21 8.5H6"/></svg><span class="icon-badge" data-cart-count style="display:none">0</span></a><a href="artisan-profile.html?id=a1" class="btn btn-primary btn-sm">My Profile</a></div>
+</div></header>
+
+<div class="dash-layout">
+  <button class="icon-btn dash-mobile-toggle" id="dash-toggle" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+  <div class="dash-overlay" id="dash-overlay"></div>
+  <aside class="dash-sidebar" id="dash-sidebar">
+    <div class="ds-brand"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3.5c3 3.2 5 6 5 9.2a5 5 0 01-10 0c0-3.2 2-6 5-9.2z"/></svg></span><span><span class="brand-name" style="color:#fff;font-size:19px">Stackly <em style="color:var(--gold)">Artisan</em></span><span class="brand-sub" style="color:#A89C86;font-size:11px">Studio Portal</span></span></div>
+    <div class="dash-user"><img src="images/artisan-01.webp" alt="Meera Agarwal"><div><b>Meera Agarwal</b><span>Pottery &amp; Ceramics</span></div></div>
+    <nav class="dash-nav">
+      <div class="dn-label">Studio</div>
+      <a href="artisan-dashboard.html" class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="5" rx="1.5"/><rect x="13" y="10" width="8" height="11" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/></svg>Dashboard</a>
+      <a href="add-product.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Add Product</a>
+      <a href="orders.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6l9-4 9 4v12l-9 4-9-4z"/><path d="M3 6l9 4 9-4M12 10v12"/></svg>Orders<span class="dn-badge">5</span></a>
+      <a href="artisan-profile.html?id=a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg>Public Profile</a>
+      <div class="dn-label">Business</div>
+      <a href="orders.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg>Payouts</a>
+      <a href="contact.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.5 8.5 0 01-12.6 7.5L3 21l2-5.4A8.5 8.5 0 1121 11.5z"/></svg>Support</a>
+      <a href="login.html" class="logout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9"/></svg>Log Out</a>
+    </nav>
+  </aside>
+  <main class="dash-main">
+    <div class="dash-head"><div><h1>Namaste, Meera</h1><p>Here's how your studio performed this month.</p></div><div class="dh-actions"><a href="add-product.html" class="btn btn-primary">+ Add New Product</a></div></div>
+    <div class="stat-cards">
+      <div class="stat-card t1"><span class="sc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6l9-4 9 4v12l-9 4-9-4z"/><path d="M3 6l9 4 9-4M12 10v12"/></svg></span><div><b>₹42,850</b><span>Sales This Month</span></div><span class="sc-trend">+18%</span></div>
+      <div class="stat-card t2"><span class="sc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.8l2.2 4.6 5 .7-3.6 3.5.8 5-4.4-2.3-4.4 2.3.8-5L4.8 8l5-.7z"/></svg></span><div><b>4.9</b><span>Avg. Rating</span></div><span class="sc-trend">+0.1</span></div>
+      <div class="stat-card t3"><span class="sc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg></span><div><b id="da-products">—</b><span>Active Products</span></div></div>
+      <div class="stat-card t4"><span class="sc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span><div><b>218</b><span>Orders Fulfilled</span></div><span class="sc-trend">+32</span></div>
+    </div>
+    <div class="dash-grid">
+      <div class="dash-panel">
+        <h3>Recent Orders <a href="orders.html">View all</a></h3>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead><tr><th>Order</th><th>Product</th><th>Qty</th><th>Status</th><th>Total</th></tr></thead>
+            <tbody id="da-orders"></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="dash-panel">
+        <h3>Low Stock Alerts</h3>
+        <div class="recent-list" id="da-lowstock"></div>
+      </div>
+    </div>
+    <div class="dash-panel">
+      <h3>Products</h3>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead><tr><th>Product</th><th>Price</th><th>Sold</th><th>Stock</th><th>Status</th></tr></thead>
+          <tbody id="da-products-table"></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script>
+(function(){
+  const d = STACKLY.data;
+  const meera = 'a1';
+  const works = d.artisanProducts(meera);
+  $('#da-products').textContent = works.length;
+  $('#da-orders').innerHTML = [
+    {id:'SA-4821', p:'p1', q:1, status:'delivered', t:1450},
+    {id:'SA-4809', p:'p10', q:2, status:'shipped', t:6800},
+    {id:'SA-4802', p:'p14', q:3, status:'processing', t:2250},
+    {id:'SA-4794', p:'p4', q:1, status:'processing', t:5600},
+    {id:'SA-4788', p:'p1', q:1, status:'paid', t:1450}
+  ].map(o=>{ const p=d.getProduct(o.p); return `<tr><td><span class="order-id">${o.id}</span></td><td><div class="th-prod"><img src="${p.img}"><b>${p.title}</b></div></td><td>${o.q}</td><td><span class="status ${o.status}">${o.status.charAt(0).toUpperCase()+o.status.slice(1)}</span></td><td>${d.formatPrice(o.t)}</td></tr>`; }).join('');
+  const low = works.filter(p=> p.stock<=10);
+  $('#da-lowstock').innerHTML = low.length ? low.map(p=>`<div class="rl-item"><img src="${p.img}"><div><b>${p.title}</b><span class="rl-date">${p.stock} left in stock</span></div><span class="rl-price" style="color:#A93226">Low</span></div>`).join('') : '<p style="color:var(--text-2);font-size:14px;padding:8px 0">All stock levels are healthy.</p>';
+  $('#da-products-table').innerHTML = works.map((p,i)=>`<tr><td><div class="th-prod"><img src="${p.img}"><b>${p.title}</b><span>${d.getCategory(p.category).name}</span></div></td><td>${d.formatPrice(p.price)}</td><td>${40+i*7}</td><td>${p.stock}</td><td><span class="status ${p.stock>10?'active':'processing'}">${p.stock>10?'Active':'Low stock'}</span></td></tr>`).join('');
+})();
+</script>
+</body>
+</html>
