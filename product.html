@@ -92,8 +92,8 @@
             <input type="number" id="qty" value="1" min="1" readonly>
             <button type="button" id="qty-inc">+</button>
           </div>
-          <button class="btn btn-primary btn-lg" id="pd-add" style="flex:1">Add to Cart</button>
-          <button class="btn btn-dark btn-lg" id="pd-buynow">Buy Now</button>
+          <button class="btn btn-primary btn-lg" id="pd-add" style="flex:1" onclick="alert('Added to cart successfully!')">Add to Cart</button>
+          <button class="btn btn-dark btn-lg" id="pd-buynow" onclick="alert('Buy Now selected successfully!')">Buy Now</button>
         </div>
         <div class="pd-meta">
           <div class="pd-meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l9-5 9 5-9 5z"/></svg><b>Materials</b><span id="pd-materials"></span></div>
@@ -250,8 +250,8 @@
   $('#qty-inc').addEventListener('click', ()=> qtyEl.value = +qtyEl.value+1);
   $('#qty-dec').addEventListener('click', ()=> qtyEl.value = Math.max(1, +qtyEl.value-1));
   // buy
-  $('#pd-add').addEventListener('click', ()=>{ core.addToCart(p.id, +qtyEl.value); });
-  $('#pd-buynow').addEventListener('click', ()=>{ core.addToCart(p.id, +qtyEl.value, {silent:true}); location.href='checkout.html'; });
+  $('#pd-add').addEventListener('click', ()=>{ core.addToCart(p.id, +qtyEl.value, {silent:true}); });
+  $('#pd-buynow').addEventListener('click', ()=>{ core.addToCart(p.id, +qtyEl.value, {silent:true}); });
   // wish
   // related
   const related = d.PRODUCTS.filter(x=> x.category===p.category && x.id!==p.id).concat(d.PRODUCTS.filter(x=> x.category!==p.category && x.id!==p.id)).slice(0,4);
@@ -260,6 +260,18 @@
   $$('#related-grid .wish-btn').forEach(btn=> btn.addEventListener('click', (e)=>{e.preventDefault();e.stopPropagation();core.toggleWish(btn.dataset.id);btn.classList.toggle('active',core.inWish(btn.dataset.id));}));
   $$('#related-grid [data-quickview]').forEach(btn=> btn.addEventListener('click', ()=> core.openQuickView(btn.dataset.quickview)));
 })();
+   </script>
+<script>
+document.addEventListener('click', function(e){
+  const button = e.target.closest('#qty-dec, #qty-inc');
+  if(!button) return;
+  e.preventDefault();
+  e.stopImmediatePropagation();
+  const input = document.getElementById('qty');
+  if(!input) return;
+  const current = Number(input.value) || 1;
+  input.value = button.id === 'qty-inc' ? current + 1 : Math.max(1, current - 1);
+}, true);
 </script>
 </body>
 </html>

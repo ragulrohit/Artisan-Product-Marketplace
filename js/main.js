@@ -292,6 +292,7 @@ window.STACKLY = window.STACKLY || {};
   /* ---------- Placeholder links ---------- */
   function initPlaceholderLinks(){
     $$('.site-footer .social a').forEach(a=> a.href='notfound.html');
+    $$('a[href="#"][aria-label]').forEach(a=> a.href='notfound.html');
     $$('.auth-row a').forEach(a=> a.href='notfound.html');
     $$('.auth-side .social-btn').forEach(btn=> btn.addEventListener('click', ()=> location.href='notfound.html'));
   }
