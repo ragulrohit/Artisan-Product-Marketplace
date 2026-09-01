@@ -236,6 +236,7 @@ p{color:var(--text-2)}
 .mobile-nav .mn-link.active{color:var(--gold);border-left:3px solid var(--gold);padding-left:17px}
 
 .header-actions{margin-left:auto;display:flex;align-items:center;gap:10px}
+.header-actions .search-trigger{display:none}
 
 /* Search overlay */
 .search-trigger{width:44px;height:44px}
